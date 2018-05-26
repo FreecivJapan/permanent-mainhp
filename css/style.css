@@ -1,0 +1,573 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css) screen and (max-width: 480px);
+
+/* スクロールバー表示設定 */
+html {
+	height: 100%;
+	overflow-y: scroll;
+}
+
+/* 背景色、フォント設定 */
+body {
+	height: 100%;
+	margin: 0;
+	background-color: #d8dbf5;
+	font-family: 'Open Sans','Noto Sans Japanese',Verdana,"Takao Pゴシック",TakaoPGothic,"IPA Pゴシック",IPAPGothic,"游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+}
+
+/* 行間 */
+p {
+	line-height: 1.4;
+}
+
+/* --- 見出し --- */
+h2 {
+	position: relative;
+	margin-bottom: 1px;
+	padding: 0;
+	padding-left: 55px;
+	line-height: 40px; /*color:#666666;*/
+	border-bottom: 3px double #242f88;
+	text-shadow: 0 1px 1px #666;
+}
+
+h2:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border-right: #f3f4fc solid 2px;
+	background: #242f88;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.0)),color-stop(0.20,rgba(255,255,255,0.0)),color-stop(0.20,rgba(255,255,255,0.1)),color-stop(0.40,rgba(255,255,255,0.1)),color-stop(0.40,rgba(255,255,255,0.3)),color-stop(0.60,rgba(255,255,255,0.3)),color-stop(0.60,rgba(255,255,255,0.5)),color-stop(0.80,rgba(255,255,255,0.5)),color-stop(0.80,rgba(255,255,255,0.6)),to(rgba(255,255,255,0.6)));
+	background-image: -webkit-linear-gradient(top,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	background-image: -moz-linear-gradient(top,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	background-image: -o-linear-gradient(top,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	background-image: linear-gradient(to bottom,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	z-index: 1;
+}
+
+h2:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background-image: -webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0.0)),color-stop(0.20,rgba(255,255,255,0.0)),color-stop(0.20,rgba(255,255,255,0.1)),color-stop(0.40,rgba(255,255,255,0.1)),color-stop(0.40,rgba(255,255,255,0.3)),color-stop(0.60,rgba(255,255,255,0.3)),color-stop(0.60,rgba(255,255,255,0.5)),color-stop(0.80,rgba(255,255,255,0.5)),color-stop(0.80,rgba(255,255,255,0.6)),to(rgba(255,255,255,0.6)));
+	background-image: -webkit-linear-gradient(left,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	background-image: -moz-linear-gradient(left,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	background-image: -o-linear-gradient(left,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	background-image: linear-gradient(to right,transparent 20%,rgba(255,255,255,0.1) 20%,rgba(255,255,255,0.1) 40%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.3) 60%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.5) 80%,rgba(255,255,255,0.6) 80%,rgba(255,255,255,0.6) 100%);
+	z-index: 1;
+}
+
+
+/* --- テーブル --- */
+table {
+	line-height: 1.3;
+}
+
+th {
+	text-align: left;
+}
+
+
+/* --- index.html --- */
+/* -- 接続方法リスト -- */
+ul.how-to-connect {
+	padding-left: 1em;
+}
+
+ul.how-to-connect li {
+	list-style-type: none;
+}
+
+
+/* --- contact.html --- */
+/* メールアドレス @ */
+span.mailat:before {
+	content: "@";
+}
+
+
+/* --- コンテンツレイアウト(とは？) --- */
+/* -- ヘッダー -- */
+.header-bg {
+	background-color: #fad2d3;
+	border-bottom: solid 20px #fff;
+}
+
+header {
+	margin: 0 auto;
+	padding: 10px 0;
+	width: 940px;
+	height: 40px;
+}
+
+header h1 {
+	margin: 0;
+	text-align: right;
+	padding-right: 20px;
+	text-shadow: 0 1px 1px #666;
+}
+
+header .page-title {
+}
+
+header .site-title:before {
+	content: " - ";
+}
+
+/* -- 縦線 -- */
+.drawer-container:before {
+	content: "";
+	display: block;
+	position: fixed;
+	width: 140px;
+	height: 100%;
+	top: 0;
+	left: calc(50% - 940px/2 - 160px - 10px);
+	background-color: #fad2d3;
+}
+
+.drawer-container:after {
+	content: "";
+	display: block;
+	position: fixed;
+	width: 180px;
+	height: 100%;
+	top: 0;
+	left: calc(50% - 940px/2 - 180px - 10px);
+	z-index: -1;
+	background-color: #fff;
+}
+/* -- 縦線 ここまで -- */
+
+/* -- コンテンツ部分 -- */
+.drawer-container {
+	min-height: calc(100% - 80px - 20px); /* 少なくとも画面の高さと同じ高さを確保 */
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	/* メインコンテンツの高さを少なくとも画面最下部まで伸ばす */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	width: 940px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: #f3f4fc;
+	border: solid 1px #b0b6ea;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px 0 #bdc2ee;
+}
+
+.container > article {
+	-webkit-flex: 1;
+	flex: 1;
+	padding-left: 10px;
+}
+
+/* -- ナビゲーションバー -- */
+nav.menu {
+	width: 220px;
+	margin: 20px;
+	font-size: 80%;
+}
+
+nav.menu > ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: solid 1px #b0b6ea; /* 80% */
+	border-radius: 1px;
+	box-shadow: 2px 2px 3px 0 #ddd;
+	overflow: hidden;
+}
+
+/* メニュー間の区切り */
+nav.menu > ul > li + li {
+	border-top: 1px #b0b6ea solid; /* 80% */
+}
+
+/* サブメニュー間の区切り */
+nav.menu > ul > li > ul > li + li {
+	border-top: 1px rgba(0,0,0,0.1) dashed;
+}
+
+/* メニュー1段目の項目 */
+nav.menu > ul > li.menu-main {
+	background: #d8dbf5;
+	background: -moz-linear-gradient(#d8dbf5 0%,#b0b6ea 100%); /* 90% -> 80% */
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#d8dbf5),color-stop(100%,#b0b6ea));
+	background: -webkit-linear-gradient(#d8dbf5 0%,#b0b6ea 100%);
+	background: linear-gradient(#d8dbf5 0%,#b0b6ea 100%);
+}
+
+/* 選択されたメニュー項目 */
+nav.menu > ul > li.menu-active {
+	background: #5260d1;
+	background: -moz-linear-gradient(#5260d1 0%,#3242be 100%); /* 57% -> 47%  */
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#5260d1),color-stop(100%,#3242be));
+	background: -webkit-linear-gradient(#5260d1 0%,#3242be 100%);
+	background: linear-gradient(#5260d1 0%,#3242be 100%);
+}
+
+/* サブメニュー */
+nav.menu > ul > li > ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* サブメニュー項目 */
+nav.menu > ul > li > ul > li {
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	background: #e5e8f8; /* 94% */
+}
+
+/* 選択されたメニューのサブメニュー項目 */
+nav.menu > ul > li.menu-active-sub > ul > li {
+	background: #b0b6ea; /* 80% */
+}
+
+/* -- リンク -- */
+nav.menu a {
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	padding: 10px;
+	color: #000;
+	text-shadow: 0 1px 1px #ccc;
+	border-left: 4px #d8dbf5 solid; /* 90% */
+}
+
+nav.menu li.menu-active a {
+	color: #fff;
+	text-shadow: 0 1px 1px #222;
+	border-left: 4px #5260d1 solid; /* 57% */
+}
+
+nav.menu li.menu-active-sub a {
+	border-left: 4px #a2aae6 solid; /* 77% */
+}
+
+/* オンマウス時 */
+nav.menu > ul > li a:hover {
+	border-left-color: #161c52;
+}
+/* --- コンテンツレイアウト ここまで --- */
+
+
+/* --- ドロワーメニュー --- */
+/* -- PCレイアウトでは非表示 */
+.drawer-toggle {
+	display: none;
+}
+
+.drawer-toggle + label {
+	display: none;
+}
+
+/* アニメーション */
+.drawer-toggle:checked ~ .drawer-container {
+	-webkit-transform: translate(calc(180px),0);
+	transform: translate(calc(180px),0);
+}
+
+
+/* --- 480ピクセルより大きく960ピクセル以下(横スクロールを考慮) --- */
+@media screen and (max-width: 960px) and (min-width: 481px) {
+	.header-bg {
+		width: 960px;
+	}
+
+	.drawer-container {
+		margin-left: 4px;
+	}
+}
+
+
+/* --- モバイル用 --- */
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 80%;
+	}
+
+	body {
+		-webkit-text-size-adjust: 100%;
+	}
+
+	h2 {
+		margin-right: 5px;
+	}
+
+	.container {
+		width: 96%;
+		height: auto;
+	}
+
+	/* --- ヘッダー --- */
+	.header-bg {
+		position: relative;
+		left: -300px;
+		width: 100%;
+		height: 90px;
+		padding-left: 300px;
+	}
+
+	header {
+		width: 100%;
+		height: 70px;
+		padding: 10px 0;
+	}
+
+	header:after,header:before {
+		display: none;
+	}
+
+	header h1 {
+		text-align: center;
+		margin: 0;
+		padding-left: 150px; /* メニューボタン用スペース確保 */
+		padding-right: 0;
+	}
+
+	header .page-title {
+		display: block;
+	}
+
+	header .site-title {
+		text-shadow: 0 1px 1px #999;
+		font-size: 65%;
+		display: block;
+		word-break: keep-all; /* 折り返す場合、かならず単語の切れ目で折り返す */
+	}
+
+	header .site-title:before {
+		display: none;
+	}
+
+	/* --- ドロワーメニュー --- */
+	.drawer-container {
+		margin-top: -20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		min-height: calc(100vh - 110px - 20px);
+		-webkit-transition-property: -webkit-transform;
+		transition-property: transform;
+		-webkit-transition-duration: 500ms;
+		transition-duration: 500ms;
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+	}
+	/* -- ドロワーメニューボタン -- */
+	.drawer-toggle + label {
+		display: block;
+		position: absolute;
+		left: 14px;
+		top: 4px;
+		width: calc(140px - 12px);
+		height: 78px;
+		z-index: 1;
+		border: solid 2px #f17579;
+		border-radius: 3px;
+		font-size: 26px;
+		text-align: center;
+		font-weight: 700;
+		color: #e71920;
+	}
+
+	label > .side-arrow {
+		display: block;
+		margin-top: 34px;
+	}
+
+	/* - 矢印 - */
+	.drawer-toggle + label:before {
+		content: "";
+		display: block;
+		z-index: 1;
+		position: absolute;
+		top: 12px;
+		left: calc(50% - 7px);
+		width: 14px;
+		height: 14px;
+		-webkit-transition-property: -webkit-transform;
+		transition-property: transform;
+		-webkit-transition-duration: 500ms;
+		transition-duration: 500ms;
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+		border-top: 3px solid #e71920;
+		border-left: 3px solid #e71920;
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+	.side-arrow:before {
+		content: "";
+		display: block;
+		z-index: 1;
+		position: absolute;
+		top: 12px;
+		left: calc(50% - 7px - 20px);
+		width: 14px;
+		height: 14px;
+		-webkit-transition-property: -webkit-transform;
+		transition-property: transform;
+		-webkit-transition-duration: 500ms;
+		transition-duration: 500ms;
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+		border-top: 3px solid #e71920;
+		border-left: 3px solid #e71920;
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+	.side-arrow:after {
+		content: "";
+		display: block;
+		z-index: 1;
+		position: absolute;
+		top: 12px;
+		left: calc(50% - 7px + 20px);
+		width: 14px;
+		height: 14px;
+		-webkit-transition-property: -webkit-transform;
+		transition-property: transform;
+		-webkit-transition-duration: 500ms;
+		transition-duration: 500ms;
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+		border-top: 3px solid #e71920;
+		border-left: 3px solid #e71920;
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+
+	/* -- アニメーション -- */
+	.drawer-toggle:checked ~ label:before,.drawer-toggle:checked ~ label > .side-arrow:before,.drawer-toggle:checked ~ label > .side-arrow:after {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+	.drawer-toggle:checked ~ label:before {
+		left: calc(50% - 5px);
+	}
+
+	.drawer-toggle:checked ~ label > .side-arrow:before {
+		left: calc(50% - 5px - 20px);
+	}
+
+	.drawer-toggle:checked ~ label > .side-arrow:after {
+		left: calc(50% - 5px + 20px);
+	}
+
+	.drawer-toggle:checked ~ .header-bg {
+		right: 180px;
+		padding-right: 180px;
+	}
+
+	/* -- 縦線 -- */
+	.drawer-container:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 140px;
+		height: 100%;
+		top: 0;
+		left: calc(-140px - 20px - 10px);
+		z-index: 1;
+		background-color: #fad2d3;
+	}
+
+	.drawer-container:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 180px;
+		height: 100%;
+		top: 0;
+		left: calc(-180px - 10px);
+		z-index: -1;
+		background-color: #fff;
+	}
+	/* -- 縦線 ここまで -- */
+
+
+	/* -- ナビゲーションバー -- */
+	nav.menu {
+		margin: 0;
+		width: 140px;
+		position: absolute;
+		top: 0;
+		left: calc(-140px - 20px - 10px);
+		z-index: 2;
+		font-size: 140%;
+	}
+
+	nav.menu > ul {
+		border: solid 1px #f5a3a6; /* 80% */
+	}
+
+	/* メニュー間の区切り */
+	nav.menu > ul > li + li {
+		border-top: 1px #f5a3a6 solid; /* 80% */
+	}
+
+	/* メニュー1段目の項目 */
+	nav.menu > ul > li.menu-main {
+		background: #fad2d3;
+		background: -moz-linear-gradient(#fad2d3 0%,#f5a3a6 100%); /* 90% -> 80% */
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#fad2d3),color-stop(100%,#f5a3a6));
+		background: -webkit-linear-gradient(#fad2d3 0%,#f5a3a6 100%);
+		background: linear-gradient(#fad2d3 0%,#f5a3a6 100%);
+	}
+
+	/* 選択されたメニュー項目 */
+	nav.menu > ul > li.menu-active {
+		background: #ea383e;
+		background: -moz-linear-gradient(#ea383e 0%,#d8171d 100%); /* 57% -> 47%  */
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ea383e),color-stop(100%,#d8171d));
+		background: -webkit-linear-gradient(#ea383e 0%,#d8171d 100%);
+		background: linear-gradient(#ea383e 0%,#d8171d 100%);
+	}
+
+	/* サブメニュー */
+	nav.menu > ul > li > ul {
+		display: none;
+	}
+
+	/* - リンク - */
+	nav.menu a {
+		border-left: 4px #fad2d3 solid; /* 90% */
+	}
+
+	nav.menu li.menu-active a {
+		border-left: 4px #ea383e solid; /* 57% */
+	}
+
+	nav.menu li.menu-active-sub a {
+		border-left: 4px #f49497 solid; /* 77% */
+	}
+
+	/* オンマウス時 */
+	nav.menu > ul > li a:hover {
+		border-left-color: #e71920;
+	}
+
+}
+
+/* おしまい */
