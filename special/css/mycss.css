@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+
+body {
+  min-height : 1000px;
+}
+
+header.jumbotron {
+  height: 710px;
+  background: url("../img/mainpic.jpg") center 60% no-repeat;
+  background-size: cover;
+}
+
+h1.jumbotron-h1{
+  font-family: 'Noto Sans Kannada', sans-serif;
+  color : #ffffff;
+  text-shadow: 3px 3px 2px #000000;
+}
+
+h2.jumbotron-h2{
+  font-family: 'Noto Sans Kannada', sans-serif;
+  color : #ffffff;
+  text-shadow: 3px 3px 4px #000000;
+}
+
+@media (max-width: 1199px){
+header.jumbotron {
+    height: 610px;
+    background: url("../img/mainpic.jpg") center no-repeat;
+    background-size: cover;
+}
+}
+@media (max-width: 991px){
+header.jumbotron {
+    height: 510px;
+    background: url("../img/mainpic.jpg") center no-repeat;
+    background-size: cover;
+}
+}
+@media (max-width: 767px){
+header.jumbotron {
+    height: 410px;
+    background: url("../img/mainpic.jpg") center no-repeat;
+    background-size: cover;
+}
+}
+
+.row {
+  margin : 0 0 50px 0;
+}
+
+
+footer.jumbotron {
+  height: 510px;
+  background: url("../img/footpic.jpg") center 50% no-repeat;
+  background-size: cover;
+  margin : 0;
+  position : relative;
+}
+
+footer.jumbotron:before {
+  z-index  : 10;
+  content  : "";
+  display  : block;
+  position : absolute;
+  top    : 0;
+  left   : 0;
+  right  : 0;
+  bottom : 0;
+  background : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+}
+
+@media (max-width: 1199px){
+footer.jumbotron {
+  height: 410px;
+  background: url("../img/footpic.jpg") center 50% no-repeat;
+  background-size: cover;
+  margin : 0;
+  position : relative;
+}
+
+footer.jumbotron:before {
+  z-index  : 10;
+  content  : "";
+  display  : block;
+  position : absolute;
+  top    : 0;
+  left   : 0;
+  right  : 0;
+  bottom : 0;
+  background-color : rgba(0, 0, 0, 0.6);
+}
+}
+@media (max-width: 991px){
+footer.jumbotron {
+  height: 310px;
+  background: url("../img/footpic.jpg") center 50% no-repeat;
+  background-size: cover;
+  margin : 0;
+  position : relative;
+}
+
+footer.jumbotron:before {
+  z-index  : 10;
+  content  : "";
+  display  : block;
+  position : absolute;
+  top    : 0;
+  left   : 0;
+  right  : 0;
+  bottom : 0;
+  background-color : rgba(0, 0, 0, 0.6);
+}
+}
+@media (max-width: 767px){
+footer.jumbotron {
+  height: 210px;
+  background: url("../img/footpic.jpg") center 50% no-repeat;
+  background-size: cover;
+  margin : 0;
+  position : relative;
+}
+
+footer.jumbotron:before {
+  z-index  : 10;
+  content  : "";
+  display  : block;
+  position : absolute;
+  top    : 0;
+  left   : 0;
+  right  : 0;
+  bottom : 0;
+  background-color : rgba(0, 0, 0, 0.6);
+}
+}
+
+footer.jumbotron > .container > p {
+  position : absolute;
+  left   : 0;
+  right  : 0;
+  bottom : 30px;
+  text-align : center;
+  z-index  : 100;
+  color : #ffffff;
+}
